@@ -4,7 +4,7 @@ import javafx.fxml.*;
 import javafx.stage.*;
 import java.io.IOException;
 
-public class LoginController {
+public class loginController {
     @FXML
     private javafx.scene.control.Button Register;
     @FXML
@@ -12,7 +12,7 @@ public class LoginController {
         try {
             Stage stage = (Stage) Register.getScene().getWindow();
             stage.hide();
-            FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("Register.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("register.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 680, 580);
             Stage window = new Stage();
             window.setTitle("Register");
