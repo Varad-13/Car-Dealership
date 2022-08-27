@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="222.0" prefWidth="640.0" style="-fx-background-color: #6272a4;" />
+      <TextField layoutX="47.0" layoutY="71.0" prefHeight="40.0" prefWidth="550.0" promptText="User ID/Email" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
+      <PasswordField layoutX="47.0" layoutY="132.0" prefHeight="40.0" prefWidth="550.0" promptText="Password" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
+      <Hyperlink layoutX="495.0" layoutY="256.0" text="Forgot Password?" textFill="#ff5555" />
+      <Button layoutX="47.0" layoutY="252.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Login" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="196.0" layoutY="252.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Register" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
