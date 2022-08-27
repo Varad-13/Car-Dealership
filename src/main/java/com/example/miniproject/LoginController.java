@@ -2,7 +2,6 @@ package com.example.miniproject;
 import javafx.scene.*;
 import javafx.fxml.*;
 import javafx.stage.*;
-
 import java.io.IOException;
 
 public class LoginController {
