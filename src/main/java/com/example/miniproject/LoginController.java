@@ -1,13 +1,9 @@
 package com.example.miniproject;
-import javafx.application.Application;
 import javafx.scene.*;
 import javafx.fxml.*;
-import javafx.scene.control.Button;
 import javafx.stage.*;
 
 import java.io.IOException;
-
-import static javafx.application.Application.*;
 
 public class LoginController {
     @FXML
