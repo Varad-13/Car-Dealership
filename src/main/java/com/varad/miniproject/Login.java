@@ -1,4 +1,4 @@
-package com.example.miniproject;
+package com.varad.miniproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

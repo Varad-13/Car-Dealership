@@ -1,4 +1,4 @@
-module com.example.miniproject {
+module com.varad.miniproject {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -7,6 +7,6 @@ module com.example.miniproject {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.miniproject to javafx.fxml;
-    exports com.example.miniproject;
+    opens com.varad.miniproject to javafx.fxml;
+    exports com.varad.miniproject;
 }
