@@ -1,4 +1,4 @@
-package com.varad.miniproject;
+package com.varad.carDealership;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Login extends Application {
+public class Driver extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Driver.class.getResource("Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 320);
         stage.setTitle("Login");
         stage.setScene(scene);

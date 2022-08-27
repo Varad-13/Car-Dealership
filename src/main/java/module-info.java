@@ -7,6 +7,6 @@ module com.varad.miniproject {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.varad.miniproject to javafx.fxml;
-    exports com.varad.miniproject;
+    opens com.varad.carDealership to javafx.fxml;
+    exports com.varad.carDealership;
 }
