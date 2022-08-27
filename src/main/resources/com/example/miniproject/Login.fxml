@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.miniproject.LoginController">
    <children>
       <AnchorPane prefHeight="222.0" prefWidth="640.0" style="-fx-background-color: #6272a4;" />
       <TextField layoutX="47.0" layoutY="71.0" prefHeight="40.0" prefWidth="550.0" promptText="User ID/Email" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
@@ -16,7 +16,7 @@
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="196.0" layoutY="252.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Register" textFill="#f8f8f2">
+      <Button fx:id="Register" layoutX="196.0" layoutY="252.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Register" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
