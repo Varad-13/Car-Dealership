@@ -7,11 +7,9 @@
 
 <Pane maxHeight="320.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.varad.carDealership.loginController">
    <children>
-      <AnchorPane maxWidth="640.0" prefHeight="222.0" prefWidth="640.0" style="-fx-background-color: #6272a4;">
-         <children>
-            <PasswordField fx:id="Password" layoutX="47.0" layoutY="127.0" prefHeight="40.0" prefWidth="550.0" promptText="Password" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2;" />
-         </children></AnchorPane>
+      <AnchorPane maxWidth="640.0" prefHeight="222.0" prefWidth="640.0" style="-fx-background-color: #6272a4;" />
       <TextField fx:id="Email" layoutX="47.0" layoutY="71.0" prefHeight="40.0" prefWidth="550.0" promptText="User ID/Email" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
+      <PasswordField fx:id="Password" layoutX="47.0" layoutY="135.0" prefHeight="40.0" prefWidth="550.0" promptText="Password" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2;" />
       <Hyperlink fx:id="forgotPassword" layoutX="495.0" layoutY="256.0" text="Forgot Password?" textFill="#ff5555" />
       <Button fx:id="Login" layoutX="47.0" layoutY="252.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Login" textFill="#f8f8f2">
          <font>
