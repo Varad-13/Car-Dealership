@@ -9,8 +9,8 @@ public class db {
     private static final String DATABASE_URL = "jdbc:mysql://database-1.cj5xtfkwqhiq.ap-south-1.rds.amazonaws.com/mini_project";
     private static final String DATABASE_USERNAME = "admin";
     private static final String DATABASE_PASSWORD = "genius123";
-    private static final String INSERT_QUERY = "INSERT INTO users (uname, uemail, upasswd) VALUES (?, ?, ?)";
-    public void insertRecord(String name, String email, String passwd) throws SQLException {
+    private static final String INSERT_QUERY = "INSERT INTO loginDetails (uname, uemail, upasswd) VALUES (?, ?, ?)";
+    public void insertLoginDetails(String name, String email, String passwd) throws SQLException {
         try (Connection connection = DriverManager
                 .getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY)) {

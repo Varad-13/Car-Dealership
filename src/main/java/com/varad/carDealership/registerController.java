@@ -27,7 +27,7 @@ public class registerController {
             String emailId = temail.getText();
             String password = passwd.getText();
             com.varad.carDealership.db jdbc = new db();
-            jdbc.insertRecord(fullName, emailId, password);
+            jdbc.insertLoginDetails(fullName, emailId, password);
             FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 640, 320);
             Stage window = new Stage();
