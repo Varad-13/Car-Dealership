@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3daefad7-15a9-49f8-bea2-72bbdf38f026" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/varad/carDealership/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/varad/carDealership/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/alertBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/alertBoxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/db.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
