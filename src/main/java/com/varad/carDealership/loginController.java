@@ -16,6 +16,7 @@ public class loginController {
     private javafx.scene.control.Button Register;
     @FXML
     protected void onLoginButtonClick() {
+        System.out.println("Login Clicked!");
         try {
             com.varad.carDealership.db jdbc = new db();
             String emailId = Email.getText();

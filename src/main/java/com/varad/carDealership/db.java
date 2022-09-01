@@ -54,6 +54,16 @@ public class db {
             printSQLException(e);
         }
     }
+    public boolean connectDatabase(){
+        try{
+            Connection connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+            System.out.println("Connection Success");
+            return true;
+        }catch(SQLException e){
+            System.out.println("SQL Connection fail!");
+            return false;
+        }
+    }
 
     public static void printSQLException(SQLException ex) {
         for (Throwable e: ex) {
