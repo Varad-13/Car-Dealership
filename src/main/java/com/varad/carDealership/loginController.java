@@ -41,12 +41,8 @@ public class loginController {
         try {
             Stage stage = (Stage) Register.getScene().getWindow();
             stage.hide();
-            FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("register.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 680, 580);
-            Stage window = new Stage();
-            window.setTitle("Register");
-            window.setScene(scene);
-            window.show();
+            registerController register = new registerController();
+            register.launch(stage);
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }

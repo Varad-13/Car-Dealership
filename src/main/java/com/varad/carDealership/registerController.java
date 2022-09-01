@@ -1,5 +1,6 @@
 package com.varad.carDealership;
 import javafx.fxml.*;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -36,5 +37,12 @@ public class registerController {
         } catch (IOException | SQLException ex) {
             throw new RuntimeException(ex);
         }
+    }
+    public void launch(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("register.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 680, 580);
+        stage.setTitle("Register");
+        stage.setScene(scene);
+        stage.show();
     }
 }
