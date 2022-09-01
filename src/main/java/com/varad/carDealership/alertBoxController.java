@@ -20,4 +20,12 @@ public class alertBoxController {
         stage.setScene(scene);
         stage.show();
     }
+    public void success() throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("alertBox.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 200,120);
+        Stage stage = new Stage();
+        stage.setTitle("Congratulations!");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

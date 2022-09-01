@@ -16,20 +16,18 @@ public class loginController {
     private javafx.scene.control.Button Register;
     @FXML
     protected void onLoginButtonClick() {
-        System.out.println("Login Clicked!");
         try {
             com.varad.carDealership.db jdbc = new db();
             String emailId = Email.getText();
             String passwd = Password.getText();
-            boolean flag = jdbc.checkCredentials(emailId, passwd);
-            if(flag)
+            if(jdbc.checkCredentials(emailId, passwd))
             {
-                FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("alertBox.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 200,120);
-                Stage window = new Stage();
-                window.setTitle("Congratulations!");
-                window.setScene(scene);
-                window.show();
+                alertBoxController alert = new alertBoxController();
+                alert.success();
+            }
+            else{
+                alertBoxController alert = new alertBoxController();
+                alert.generalError();
             }
         } catch (IOException ex) {
             throw new RuntimeException(ex);
