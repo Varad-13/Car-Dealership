@@ -1,6 +1,5 @@
 package com.varad.carDealership;
 import javafx.fxml.*;
-import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -23,6 +22,7 @@ public class registerController {
     @FXML
     protected void onConfirmButtonClick() {
         try {
+            driver login = new driver();
             Stage stage = (Stage) Confirm.getScene().getWindow();
             stage.hide();
             String fullName = tname.getText();
@@ -32,12 +32,7 @@ public class registerController {
             com.varad.carDealership.db jdbc = new db();
             jdbc.insertLoginDetails(fullName, emailId, password);
             jdbc.insertUserData(fullName, emailId, address);
-            FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 320);
-            Stage window = new Stage();
-            window.setTitle("Login");
-            window.setScene(scene);
-            window.show();
+            login.start(stage);
         } catch (IOException | SQLException ex) {
             throw new RuntimeException(ex);
         }

@@ -1,7 +1,6 @@
 package com.varad.carDealership;
 import javafx.scene.*;
 import javafx.fxml.*;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.*;
@@ -15,8 +14,6 @@ public class loginController {
     private PasswordField Password;
     @FXML
     private javafx.scene.control.Button Register;
-    @FXML
-    private javafx.scene.control.Button Login;
     @FXML
     protected void onLoginButtonClick() {
         try {
