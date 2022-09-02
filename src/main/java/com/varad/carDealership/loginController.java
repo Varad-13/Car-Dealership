@@ -39,11 +39,21 @@ public class loginController {
     protected void onRegisterButtonClick() {
         try {
             Stage stage = (Stage) Register.getScene().getWindow();
-            stage.hide();
+            close(stage);
             registerController register = new registerController();
             register.launch(stage);
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
+    }
+    public void launch(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 320);
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void close(Stage stage) throws IOException {
+        stage.hide();
     }
 }

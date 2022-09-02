@@ -21,19 +21,21 @@ public class registerController {
     @FXML
     private TextArea taddress;
     @FXML
-    protected void onConfirmButtonClick() {
+    protected void onConfirmButtonClick() throws IOException {
         try {
-            driver login = new driver();
+            loginController login = new loginController();
+            registerController register = new registerController();
+            com.varad.carDealership.db jdbc = new db();
             Stage stage = (Stage) Confirm.getScene().getWindow();
-            stage.hide();
+            //Stage stage = new Stage();
             String fullName = tname.getText();
             String emailId = temail.getText();
             String password = passwd.getText();
             String address = taddress.getText();
-            com.varad.carDealership.db jdbc = new db();
             jdbc.insertLoginDetails(fullName, emailId, password);
             jdbc.insertUserData(fullName, emailId, address);
-            login.start(stage);
+            register.close(stage);
+            login.launch(stage);
         } catch (IOException | SQLException ex) {
             throw new RuntimeException(ex);
         }
@@ -44,5 +46,8 @@ public class registerController {
         stage.setTitle("Register");
         stage.setScene(scene);
         stage.show();
+    }
+    public void close(Stage stage) throws IOException{
+        stage.hide();
     }
 }

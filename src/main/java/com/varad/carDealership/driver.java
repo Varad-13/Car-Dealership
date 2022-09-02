@@ -13,11 +13,8 @@ public class driver extends Application {
     public void start(Stage stage) throws IOException {
         db database = new db();
         if(database.checkConnection()){
-            FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 640, 320);
-            stage.setTitle("Login");
-            stage.setScene(scene);
-            stage.show();
+            loginController login = new loginController();
+            login.launch(stage);
         }
     }
 

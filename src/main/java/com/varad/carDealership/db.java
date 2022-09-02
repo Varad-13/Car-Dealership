@@ -11,7 +11,7 @@ public class db {
     private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd) VALUES (?, ?, ?)";
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
 
-    public boolean checkCredentials(String email, String passwd) throws SQLException {
+    public boolean checkCredentials(String email, String passwd) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
              PreparedStatement preparedStatement = connection.prepareStatement(CHECK_CREDENTIALS)) {
             preparedStatement.setString(1, email);
@@ -28,7 +28,7 @@ public class db {
         return false;
     }
 
-    public void insertLoginDetails(String name, String email, String passwd) throws SQLException {
+    public void insertLoginDetails(String name, String email, String passwd) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOGIN)) {
             preparedStatement.setString(1, name);
@@ -42,7 +42,7 @@ public class db {
         }
     }
 
-    public void insertUserData(String name, String email, String address) throws SQLException{
+    public void insertUserData(String name, String email, String address) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DATA)) {
             preparedStatement.setString(1, name);
@@ -52,6 +52,8 @@ public class db {
         } catch (SQLException e) {
             printSQLException(e);
         } catch (IOException e) {
+            alertBoxController alert = new alertBoxController();
+            alert.generalError();
             throw new RuntimeException(e);
         }
     }
@@ -62,8 +64,6 @@ public class db {
             return true;
         } catch(SQLException e){
             System.out.println("SQL Connection fail!");
-            alertBoxController alert = new alertBoxController();
-            alert.generalError();
             return false;
         }
     }
@@ -72,13 +72,13 @@ public class db {
             return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
         }catch(SQLException e){
             System.out.println("SQL Connection fail!");
-            alertBoxController alert = new alertBoxController();
-            alert.generalError();
         }
         return null;
     }
 
-    public static void printSQLException(SQLException ex) {
+    public static void printSQLException(SQLException ex) throws IOException {
+        alertBoxController alert = new alertBoxController();
+        alert.generalError();
         for (Throwable e: ex) {
             if (e instanceof SQLException) {
                 e.printStackTrace(System.err);
