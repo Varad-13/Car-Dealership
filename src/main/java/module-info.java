@@ -8,6 +8,6 @@ module com.varad.miniproject {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
 
-    opens com.varad.carDealership to javafx.fxml;
-    exports com.varad.carDealership;
+    opens com.miniProject.carDealership to javafx.fxml;
+    exports com.miniProject.carDealership;
 }

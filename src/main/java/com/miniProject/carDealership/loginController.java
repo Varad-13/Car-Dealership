@@ -1,4 +1,4 @@
-package com.varad.carDealership;
+package com.miniProject.carDealership;
 import javafx.scene.*;
 import javafx.fxml.*;
 import javafx.scene.control.PasswordField;
@@ -17,7 +17,7 @@ public class loginController {
     @FXML
     protected void onLoginButtonClick() {
         try {
-            com.varad.carDealership.db jdbc = new db();
+            db jdbc = new db();
             String emailId = Email.getText();
             String passwd = Password.getText();
             if(jdbc.checkCredentials(emailId, passwd))

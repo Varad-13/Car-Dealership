@@ -1,4 +1,4 @@
-package com.varad.carDealership;
+package com.miniProject.carDealership;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;

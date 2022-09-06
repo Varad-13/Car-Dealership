@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="580.0" maxWidth="680.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="680.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.varad.carDealership.registerController">
+<Pane maxHeight="580.0" maxWidth="680.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="680.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.registerController">
    <children>
       <AnchorPane layoutX="-1.0" maxHeight="1.7976931348623157E308" prefHeight="580.0" prefWidth="225.0" style="-fx-background-color: #6272a4;" />
       <Text fill="#282a36" fontSmoothingType="LCD" layoutX="26.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Type">

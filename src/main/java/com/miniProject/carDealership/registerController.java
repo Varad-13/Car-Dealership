@@ -1,4 +1,4 @@
-package com.varad.carDealership;
+package com.miniProject.carDealership;
 import javafx.fxml.*;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
@@ -25,7 +25,7 @@ public class registerController {
         try {
             loginController login = new loginController();
             registerController register = new registerController();
-            com.varad.carDealership.db jdbc = new db();
+            db jdbc = new db();
             Stage stage = (Stage) Confirm.getScene().getWindow();
             //Stage stage = new Stage();
             String fullName = tname.getText();

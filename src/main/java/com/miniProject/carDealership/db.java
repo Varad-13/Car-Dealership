@@ -1,4 +1,4 @@
-package com.varad.carDealership;
+package com.miniProject.carDealership;
 import java.io.IOException;
 import java.sql.*;
 

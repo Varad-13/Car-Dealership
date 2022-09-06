@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="320.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.varad.carDealership.loginController">
+<Pane maxHeight="320.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.loginController">
    <children>
       <AnchorPane maxWidth="640.0" prefHeight="222.0" prefWidth="640.0" style="-fx-background-color: #6272a4;" />
       <TextField fx:id="Email" layoutX="47.0" layoutY="71.0" prefHeight="40.0" prefWidth="550.0" promptText="User ID/Email" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />

@@ -1,9 +1,7 @@
-package com.varad.carDealership;
+package com.miniProject.carDealership;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
