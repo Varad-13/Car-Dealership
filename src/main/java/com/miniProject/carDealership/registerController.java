@@ -28,7 +28,9 @@ public class registerController {
     @FXML
     private DatePicker tdob;
     @FXML
-    protected void onConfirmButtonClick() throws IOException {
+    private TextField tpincode;
+    @FXML
+    protected void onConfirmButtonClick() {
         try {
             loginController login = new loginController();
             registerController register = new registerController();
@@ -39,6 +41,7 @@ public class registerController {
             String password = passwd.getText();
             String address = taddress.getText();
             String number = tnumber.getText();
+            int pincode = Integer.parseInt(tpincode.getText());
             String type = null;
             if(radioUser.isSelected()) {
                 type = "Buyer";
@@ -50,13 +53,22 @@ public class registerController {
                 alert.generalError();
             }
             LocalDate dob = tdob.getValue();
+
             jdbc.insertLoginDetails(fullName, emailId, password);
-            jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob));
+            jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob), pincode);
             register.close(stage);
             login.launch(stage);
         } catch (IOException | SQLException ex) {
             throw new RuntimeException(ex);
         }
+    }
+    @FXML
+    protected void onLoginButtonClicked() throws IOException {
+        loginController login = new loginController();
+        registerController register = new registerController();
+        Stage stage = (Stage) Confirm.getScene().getWindow();
+        register.close(stage);
+        login.launch(stage);
     }
     public void launch(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("register.fxml"));

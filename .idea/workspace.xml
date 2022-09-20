@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3daefad7-15a9-49f8-bea2-72bbdf38f026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/carIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/editUserIcon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/exitIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/logo.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/plusIcon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/userIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/alertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/alertBox.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

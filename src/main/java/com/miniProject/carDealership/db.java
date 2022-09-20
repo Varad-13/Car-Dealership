@@ -8,7 +8,7 @@ public class db {
     private static final String DATABASE_USERNAME = "admin";
     private static final String DATABASE_PASSWORD = "genius123";
     private static final String INSERT_LOGIN = "INSERT INTO loginDetails (uname, uemail, upasswd) VALUES (?, ?, MD5(?))";
-    private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd, unum, utype, uDob) VALUES (?, ?, ?, ?, ?, ?)";
+    private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd, unum, utype, uDob, upincode) VALUES (?, ?, ?, ?, ?, ?, ?)";
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
     private static final String  CHECK_USERTYPE = "SELECT * FROM userData WHERE utype = ?";
 
@@ -43,7 +43,7 @@ public class db {
         }
     }
 
-    public void insertUserData(String name, String email, String address, String number, String type, Date dob) throws SQLException, IOException {
+    public void insertUserData(String name, String email, String address, String number, String type, Date dob, int pincode) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DATA)) {
             preparedStatement.setString(1, name);
@@ -52,6 +52,7 @@ public class db {
             preparedStatement.setString(4, number);
             preparedStatement.setString(5, type);
             preparedStatement.setDate(6, dob);
+            preparedStatement.setInt(7, pincode);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             printSQLException(e);

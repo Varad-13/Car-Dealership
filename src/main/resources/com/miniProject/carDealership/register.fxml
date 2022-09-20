@@ -5,9 +5,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="580.0" maxWidth="680.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="680.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.registerController">
+<Pane maxHeight="600.0" maxWidth="680.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="680.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.registerController">
    <children>
-      <AnchorPane layoutX="-1.0" maxHeight="1.7976931348623157E308" prefHeight="580.0" prefWidth="225.0" style="-fx-background-color: #6272a4;" />
+      <AnchorPane layoutX="-1.0" maxHeight="1.7976931348623157E308" prefHeight="600.0" prefWidth="225.0" style="-fx-background-color: #6272a4;">
+         <children>
+            <Text fill="#282a36" fontSmoothingType="LCD" layoutX="26.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pincode">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
       <Text fill="#282a36" fontSmoothingType="LCD" layoutX="26.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Type">
          <font>
             <Font name="Segoe UI Bold" size="21.0" />
@@ -71,16 +78,26 @@
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <Text fill="#282a36" fontSmoothingType="LCD" layoutX="24.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <Text fill="#282a36" fontSmoothingType="LCD" layoutX="26.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font name="Segoe UI Bold" size="21.0" />
          </font>
       </Text>
-      <Button fx:id="Confirm" layoutX="530.0" layoutY="517.0" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Confirm Details" textFill="#f8f8f2">
+      <Button fx:id="Confirm" layoutX="530.0" layoutY="546.0" mnemonicParsing="false" onAction="#onConfirmButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Confirm Details" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
       <PasswordField fx:id="passwd" layoutX="239.0" layoutY="455.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
+      <Button fx:id="Login" layoutX="428.0" layoutY="546.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Login" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tpincode" layoutX="239.0" layoutY="498.0" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
    </children>
 </Pane>
