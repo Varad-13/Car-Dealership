@@ -8,8 +8,9 @@ public class db {
     private static final String DATABASE_USERNAME = "admin";
     private static final String DATABASE_PASSWORD = "genius123";
     private static final String INSERT_LOGIN = "INSERT INTO loginDetails (uname, uemail, upasswd) VALUES (?, ?, MD5(?))";
-    private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd) VALUES (?, ?, ?)";
+    private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd, unum, utype, uDob) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
+    private static final String  CHECK_USERTYPE = "SELECT * FROM userData WHERE utype = ?";
 
     public boolean checkCredentials(String email, String passwd) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
@@ -42,12 +43,15 @@ public class db {
         }
     }
 
-    public void insertUserData(String name, String email, String address) throws SQLException, IOException {
+    public void insertUserData(String name, String email, String address, String number, String type, Date dob) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DATA)) {
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, email);
             preparedStatement.setString(3, address);
+            preparedStatement.setString(4, number);
+            preparedStatement.setString(5, type);
+            preparedStatement.setDate(6, dob);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             printSQLException(e);
@@ -57,7 +61,7 @@ public class db {
             throw new RuntimeException(e);
         }
     }
-    public boolean checkConnection() throws IOException {
+    public boolean checkConnection() {
         try{
             DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
             System.out.println("Connection Success");

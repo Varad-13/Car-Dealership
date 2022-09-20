@@ -13,7 +13,7 @@
             <Font name="Segoe UI Bold" size="21.0" />
          </font>
       </Text>
-      <RadioButton layoutX="313.0" layoutY="38.0" mnemonicParsing="false" text="User" textFill="#f8f8f2">
+      <RadioButton fx:id="radioUser" layoutX="313.0" layoutY="38.0" mnemonicParsing="false" text="Buyer" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
@@ -21,7 +21,7 @@
             <ToggleGroup fx:id="Type" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="510.0" layoutY="38.0" mnemonicParsing="false" text="Seller" textFill="#f8f8f2" toggleGroup="$Type">
+      <RadioButton fx:id="radioSeller" layoutX="510.0" layoutY="38.0" mnemonicParsing="false" text="Seller" textFill="#f8f8f2" toggleGroup="$Type">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>

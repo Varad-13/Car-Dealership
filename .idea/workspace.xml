@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3daefad7-15a9-49f8-bea2-72bbdf38f026" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/carIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/editUserIcon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/exitIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/logo.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/plusIcon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/userIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomePage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/alertBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/varad/carDealership/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/varad/carDealership/alertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/alertBox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/varad/carDealership/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/varad/carDealership/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +68,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="driver" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.varad.carDealership.driver" />
+    <configuration name="com.miniProject.carDealership.driver" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.miniProject.carDealership.driver" />
       <module name="Mini Project" />
       <extension name="coverage">
         <pattern>

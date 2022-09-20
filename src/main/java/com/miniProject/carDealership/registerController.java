@@ -1,14 +1,13 @@
 package com.miniProject.carDealership;
 import javafx.fxml.*;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
-
+import java.time.LocalDate;
 public class registerController {
     @FXML
     private javafx.scene.control.Button Confirm;
@@ -21,19 +20,38 @@ public class registerController {
     @FXML
     private TextArea taddress;
     @FXML
+    private TextField tnumber;
+    @FXML
+    private RadioButton radioUser;
+    @FXML
+    private RadioButton radioSeller;
+    @FXML
+    private DatePicker tdob;
+    @FXML
     protected void onConfirmButtonClick() throws IOException {
         try {
             loginController login = new loginController();
             registerController register = new registerController();
             db jdbc = new db();
             Stage stage = (Stage) Confirm.getScene().getWindow();
-            //Stage stage = new Stage();
             String fullName = tname.getText();
             String emailId = temail.getText();
             String password = passwd.getText();
             String address = taddress.getText();
+            String number = tnumber.getText();
+            String type = null;
+            if(radioUser.isSelected()) {
+                type = "Buyer";
+            } else if (radioSeller.isSelected()) {
+                type = "Seller";
+            }
+            else {
+                alertBoxController alert = new alertBoxController();
+                alert.generalError();
+            }
+            LocalDate dob = tdob.getValue();
             jdbc.insertLoginDetails(fullName, emailId, password);
-            jdbc.insertUserData(fullName, emailId, address);
+            jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob));
             register.close(stage);
             login.launch(stage);
         } catch (IOException | SQLException ex) {

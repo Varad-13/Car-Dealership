@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="560.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="manageButton" fitHeight="174.0" fitWidth="181.0" layoutX="16.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/carIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="18.0" layoutY="230.0" text="Manage Car Listings" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="editButton" fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/editUserIcon.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="231.0" layoutY="230.0" text="Edit User Details" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="exitButton" fitHeight="150.0" fitWidth="200.0" layoutX="402.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/exitIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="456.0" layoutY="227.0" text="Exit" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="107.0" prefWidth="560.0" style="-fx-background-color: #6272a4;">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="261.0" layoutX="174.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logo.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
