@@ -35,6 +35,7 @@ public class alertBoxController {
     public void success() throws IOException{
         alertBoxController.a = "Success!";
         alertBoxController.b = "Congratulations!";
+        launch();
     }
     public void generalError(String x) throws IOException {
         alertBoxController.a = x;
@@ -42,7 +43,7 @@ public class alertBoxController {
         launch();
     }
     public void setText() {
-        if(a=="Can't connect to internet"){
+        if(a=="Can't connect to internet" || a=="Success!"){
             tryAgain.setVisible(false);
         }
         text.setText(a);

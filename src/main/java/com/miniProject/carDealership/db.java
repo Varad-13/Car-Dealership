@@ -17,8 +17,10 @@ public class db {
              PreparedStatement preparedStatement = connection.prepareStatement(CHECK_CREDENTIALS)) {
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, passwd);
+            System.out.println("Waiting for SQL!");
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
+                System.out.println("Login Success");
                 return true;
             }
         } catch (SQLException e) {

@@ -18,16 +18,15 @@ public class loginController {
     protected void onLoginButtonClick() {
         System.out.println("Login Button Clicked!");
         try {
+            alertBoxController alert = new alertBoxController();
             db jdbc = new db();
             String emailId = Email.getText();
             String passwd = Password.getText();
             if(jdbc.checkCredentials(emailId, passwd))
             {
-                alertBoxController alert = new alertBoxController();
                 alert.success();
             }
             else{
-                alertBoxController alert = new alertBoxController();
                 alert.generalError("Check Credentials!");
             }
         } catch (IOException ex) {

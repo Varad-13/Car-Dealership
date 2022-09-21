@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/alertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/alertBox.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
