@@ -10,7 +10,7 @@ public class db {
     private static final String INSERT_LOGIN = "INSERT INTO loginDetails (uname, uemail, upasswd) VALUES (?, ?, MD5(?))";
     private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd, unum, utype, uDob, upincode) VALUES (?, ?, ?, ?, ?, ?, ?)";
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
-    private static final String  CHECK_USERTYPE = "SELECT * FROM userData WHERE utype = ?";
+    private static final String CHECK_USERTYPE = "SELECT * FROM userData WHERE utype = ?";
 
     public boolean checkCredentials(String email, String passwd) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
@@ -58,17 +58,18 @@ public class db {
             printSQLException(e);
         } catch (IOException e) {
             alertBoxController alert = new alertBoxController();
-            alert.generalError("SQL Error!");
+            alert.generalError("Runtime Error!");
             throw new RuntimeException(e);
         }
     }
-    public boolean checkConnection() {
+    public boolean checkConnection() throws IOException {
         try{
             DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
             System.out.println("Connection Success");
             return true;
         } catch(SQLException e){
-            System.out.println("SQL Connection fail!");
+            alertBoxController alert = new alertBoxController();
+            alert.generalError("Can't connect to internet");
             return false;
         }
     }
@@ -81,21 +82,8 @@ public class db {
         return null;
     }
 
-    public static void printSQLException(SQLException ex) throws IOException {
+    public static void printSQLException(SQLException e) throws IOException {
         alertBoxController alert = new alertBoxController();
         alert.generalError("SQL Error!");
-        for (Throwable e: ex) {
-            if (e instanceof SQLException) {
-                e.printStackTrace(System.err);
-                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
-                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
-                System.err.println("Message: " + e.getMessage());
-                Throwable t = ex.getCause();
-                while (t != null) {
-                    System.out.println("Cause: " + t);
-                    t = t.getCause();
-                }
-            }
-        }
     }
 }

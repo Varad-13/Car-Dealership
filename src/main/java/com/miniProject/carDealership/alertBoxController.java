@@ -14,9 +14,18 @@ public class alertBoxController {
     @FXML
     private javafx.scene.text.Text text = new Text();
     static String a;
+    static String b;
     @FXML
     protected void onExitButtonClicked(){
         Platform.exit();
+    }
+    public void launch() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("alertBox.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 360,120);
+        Stage stage = new Stage();
+        stage.setTitle(b);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
     protected void onTryAgainButtonClicked() {
@@ -24,26 +33,20 @@ public class alertBoxController {
         stage.hide();
     }
     public void success() throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("alertBox.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 360,120);
-        Stage stage = new Stage();
-        stage.setTitle("Congratulations!");
-        stage.setScene(scene);
-        stage.show();
+        alertBoxController.a = "Success!";
+        alertBoxController.b = "Congratulations!";
     }
-    public void generalError(String b) throws IOException {
-        alertBoxController.a = b;
+    public void generalError(String x) throws IOException {
+        alertBoxController.a = x;
+        alertBoxController.b = "Error!";
         launch();
     }
     public void setText() {
+        if(a=="Can't connect to internet"){
+            tryAgain.setVisible(false);
+        }
+        text.setText(a);
         System.out.println(a);
-    }
-    public void launch() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("alertBox.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 360,120);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
     }
     public void initialize(){
         setText();
