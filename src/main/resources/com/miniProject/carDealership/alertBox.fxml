@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="359.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.alertBoxController">
    <children>
@@ -16,15 +17,13 @@
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
-      <Text fx:id="Label" fill="#f8f8f2" layoutX="37.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
       <Button fx:id="tryAgain" layoutX="59.0" layoutY="75.0" mnemonicParsing="false" onAction="#onTryAgainButtonClicked" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Try Again" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
+      <Text fx:id="text" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <TextField fx:id="textField" layoutX="105.0" layoutY="19.0" style="-fx-background-color: #282a36;" />
+      <Label fx:id="test" layoutX="36.0" layoutY="36.0" textFill="WHITE" />
    </children>
 </Pane>
