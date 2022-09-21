@@ -27,7 +27,7 @@ public class loginController {
             }
             else{
                 alertBoxController alert = new alertBoxController();
-                alert.generalError();
+                alert.generalError("Check Credentials!");
             }
         } catch (IOException ex) {
             throw new RuntimeException(ex);

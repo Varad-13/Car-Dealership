@@ -22,8 +22,9 @@
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
-      <Text fx:id="text" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <TextField fx:id="textField" layoutX="105.0" layoutY="19.0" style="-fx-background-color: #282a36;" />
-      <Label fx:id="test" layoutX="36.0" layoutY="36.0" textFill="WHITE" />
+      <Text fx:id="text" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
    </children>
 </Pane>

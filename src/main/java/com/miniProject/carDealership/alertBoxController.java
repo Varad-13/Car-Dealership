@@ -3,11 +3,7 @@ package com.miniProject.carDealership;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -17,10 +13,7 @@ public class alertBoxController {
     private javafx.scene.control.Button tryAgain;
     @FXML
     private javafx.scene.text.Text text = new Text();
-    @FXML
-    private TextField textField = new TextField();
-    @FXML
-    private Label test = new Label();
+    static String a;
     @FXML
     protected void onExitButtonClicked(){
         Platform.exit();
@@ -38,13 +31,12 @@ public class alertBoxController {
         stage.setScene(scene);
         stage.show();
     }
-    public void generalError() throws IOException {
+    public void generalError(String b) throws IOException {
+        alertBoxController.a = b;
         launch();
     }
     public void setText() {
-        test.setText("Error!");
-        textField.setText("Error!");
-        text.setText("Error!");
+        System.out.println(a);
     }
     public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("alertBox.fxml"));

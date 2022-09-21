@@ -58,7 +58,7 @@ public class db {
             printSQLException(e);
         } catch (IOException e) {
             alertBoxController alert = new alertBoxController();
-            alert.generalError();
+            alert.generalError("SQL Error!");
             throw new RuntimeException(e);
         }
     }
@@ -83,7 +83,7 @@ public class db {
 
     public static void printSQLException(SQLException ex) throws IOException {
         alertBoxController alert = new alertBoxController();
-        alert.generalError();
+        alert.generalError("SQL Error!");
         for (Throwable e: ex) {
             if (e instanceof SQLException) {
                 e.printStackTrace(System.err);

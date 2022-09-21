@@ -50,7 +50,7 @@ public class registerController {
             }
             else {
                 alertBoxController alert = new alertBoxController();
-                alert.generalError();
+                alert.generalError("Please Select user type!");
             }
             LocalDate dob = tdob.getValue();
 
