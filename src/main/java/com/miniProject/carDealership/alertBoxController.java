@@ -43,7 +43,7 @@ public class alertBoxController {
         launch();
     }
     public void setText() {
-        if(a=="Can't connect to internet" || a=="Success!"){
+        if(a=="Can't connect to internet"){
             tryAgain.setVisible(false);
         }
         text.setText(a);

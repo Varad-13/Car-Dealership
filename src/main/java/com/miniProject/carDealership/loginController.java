@@ -24,6 +24,7 @@ public class loginController {
             String passwd = Password.getText();
             if(jdbc.checkCredentials(emailId, passwd))
             {
+
                 alert.success();
             }
             else{
