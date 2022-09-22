@@ -24,8 +24,16 @@ public class loginController {
             String passwd = Password.getText();
             if(jdbc.checkCredentials(emailId, passwd))
             {
-
-                alert.success();
+                if(jdbc.checkUsertype()==1){
+                    alert.success("User");
+                } else if (jdbc.checkUsertype()==2) {
+                    alert.success("Seller");
+                } else if (jdbc.checkUsertype()==3) {
+                    alert.success("Admin");
+                }
+                else {
+                    alert.generalError("Usertype not found contact support");
+                }
             }
             else{
                 alert.generalError("Check Credentials!");

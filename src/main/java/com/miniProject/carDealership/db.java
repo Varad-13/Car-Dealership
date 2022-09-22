@@ -12,7 +12,7 @@ public class db {
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
     private static final String CHECK_USERTYPE = "SELECT utype FROM userData WHERE uemail = ?";
     static String email = null;
-    static int usrtyp;
+
     public Connection connectDatabase() throws IOException {
         try{
             return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
@@ -42,7 +42,6 @@ public class db {
             if (resultSet.next()) {
                 System.out.println("Login Success");
                 db.email = email;
-                System.out.println(db.email);
                 return true;
             }
         } catch (SQLException e) {
@@ -52,7 +51,27 @@ public class db {
         }
         return false;
     }
-
+    public int checkUsertype(){
+        try (Connection connection = connectDatabase();
+        PreparedStatement preparedStatement = connection.prepareStatement(CHECK_USERTYPE)){
+            alertBoxController alert = new alertBoxController();
+            preparedStatement.setString(1, db.email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            String usertype = String.valueOf(resultSet.next());
+            if(usertype.equals("User")){
+                return 1;
+            } else if (usertype.equals("Seller")) {
+                return 2;
+            }
+            else{
+                return 3;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public void insertLoginDetails(String name, String email, String passwd) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOGIN)) {

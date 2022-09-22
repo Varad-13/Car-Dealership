@@ -32,8 +32,8 @@ public class alertBoxController {
         Stage stage = (Stage) tryAgain.getScene().getWindow();
         stage.hide();
     }
-    public void success() throws IOException{
-        alertBoxController.a = "Success!";
+    public void success(String x) throws IOException{
+        alertBoxController.a = x;
         alertBoxController.b = "Congratulations!";
         launch();
     }
@@ -43,11 +43,10 @@ public class alertBoxController {
         launch();
     }
     public void setText() {
-        if(a=="Can't connect to internet" || a=="Success!"){
+        if(a=="Can't connect to internet" || b=="Congratulations!"){
             tryAgain.setVisible(false);
         }
         text.setText(a);
-        System.out.println(a);
     }
     public void initialize(){
         setText();
