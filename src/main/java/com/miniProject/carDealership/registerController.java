@@ -66,8 +66,7 @@ public class registerController {
     @FXML
     protected void onLoginButtonClicked() throws IOException {
         loginController login = new loginController();
-        registerController register = new registerController();
-        register.close();
+        close();
         login.launch();
     }
     public void launch() throws IOException {

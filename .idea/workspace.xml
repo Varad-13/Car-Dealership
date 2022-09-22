@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3daefad7-15a9-49f8-bea2-72bbdf38f026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/carListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/userDetailsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/carList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/exitIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/exitIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/userIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/userIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
