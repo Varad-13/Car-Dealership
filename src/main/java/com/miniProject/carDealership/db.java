@@ -54,18 +54,14 @@ public class db {
     public int checkUsertype(){
         try (Connection connection = connectDatabase();
         PreparedStatement preparedStatement = connection.prepareStatement(CHECK_USERTYPE)){
-            alertBoxController alert = new alertBoxController();
             preparedStatement.setString(1, db.email);
             ResultSet resultSet = preparedStatement.executeQuery();
-            String usertype = String.valueOf(resultSet.next());
-            if(usertype.equals("User")){
-                return 1;
-            } else if (usertype.equals("Seller")) {
-                return 2;
+            if(resultSet.next()) {
+                System.out.println(resultSet.getInt("utype"));
+                return resultSet.getInt("utype");
             }
-            else{
-                return 3;
-            }
+            else
+                return 0;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -87,14 +83,14 @@ public class db {
         }
     }
 
-    public void insertUserData(String name, String email, String address, String number, String type, Date dob, int pincode) throws SQLException, IOException {
+    public void insertUserData(String name, String email, String address, String number, int type, Date dob, int pincode) throws SQLException, IOException {
         try (Connection connection = connectDatabase();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DATA)) {
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, email);
             preparedStatement.setString(3, address);
             preparedStatement.setString(4, number);
-            preparedStatement.setString(5, type);
+            preparedStatement.setInt(5, type);
             preparedStatement.setDate(6, dob);
             preparedStatement.setInt(7, pincode);
             preparedStatement.executeUpdate();

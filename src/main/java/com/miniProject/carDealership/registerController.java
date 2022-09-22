@@ -42,15 +42,16 @@ public class registerController {
             String address = taddress.getText();
             String number = tnumber.getText();
             int pincode = Integer.parseInt(tpincode.getText());
-            String type = null;
+            int type;
             if(radioUser.isSelected()) {
-                type = "Buyer";
-            } else if (radioSeller.isSelected()) {
-                type = "Seller";
-            }
-            else {
-                alertBoxController alert = new alertBoxController();
-                alert.generalError("Please Select user type!");
+                type = 1;
+            } else{
+                if (radioSeller.isSelected()) {
+                    type = 2;
+                }
+                else {
+                    type = 3;
+                }
             }
             LocalDate dob = tdob.getValue();
 

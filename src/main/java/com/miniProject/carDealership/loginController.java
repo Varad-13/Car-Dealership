@@ -19,20 +19,26 @@ public class loginController {
         System.out.println("Login Button Clicked!");
         try {
             alertBoxController alert = new alertBoxController();
+            sellerController seller = new sellerController();
             db jdbc = new db();
             String emailId = Email.getText();
             String passwd = Password.getText();
+            Stage stage = new Stage();
             if(jdbc.checkCredentials(emailId, passwd))
             {
-                if(jdbc.checkUsertype()==1){
-                    alert.success("User");
-                } else if (jdbc.checkUsertype()==2) {
-                    alert.success("Seller");
-                } else if (jdbc.checkUsertype()==3) {
-                    alert.success("Admin");
-                }
-                else {
-                    alert.generalError("Usertype not found contact support");
+                switch(jdbc.checkUsertype()) {
+                    case 0:
+                        alert.generalError("Usertype not found please contact support");
+                        break;
+                    case 1:
+                        alert.success("Buyer");
+                        break;
+                    case 2:
+                        seller.launch(stage);
+                        break;
+                    case 3:
+                        alert.success("Admin");
+                        break;
                 }
             }
             else{

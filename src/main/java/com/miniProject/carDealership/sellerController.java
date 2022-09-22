@@ -7,10 +7,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class sellerController {
-    public void launch() throws IOException {
+    public void launch(Stage stage) throws IOException {
     FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("sellerHomepage.fxml"));
-    Scene scene = new Scene(fxmlLoader.load(), 560, 278);
-    Stage stage = new Stage();
+    Scene scene = new Scene(fxmlLoader.load(), 500, 480);
     stage.setTitle("Driftstore");
     stage.setScene(scene);
     stage.show();
