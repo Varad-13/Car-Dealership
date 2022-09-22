@@ -60,6 +60,7 @@ public class db {
             preparedStatement.setString(2, email);
             preparedStatement.setString(3, passwd);
             preparedStatement.executeUpdate();
+            System.out.println("User registration successful");
         } catch (SQLException e) {
             printSQLException(e);
         } catch (IOException e) {
