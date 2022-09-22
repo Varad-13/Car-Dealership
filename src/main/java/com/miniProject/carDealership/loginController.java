@@ -1,6 +1,7 @@
 package com.miniProject.carDealership;
 import javafx.scene.*;
 import javafx.fxml.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.*;
@@ -13,33 +14,19 @@ public class loginController {
     @FXML
     private PasswordField Password;
     @FXML
-    private javafx.scene.control.Button Register;
+    private javafx.scene.control.Button Register = new Button();
     @FXML
     protected void onLoginButtonClick() {
         System.out.println("Login Button Clicked!");
         try {
             alertBoxController alert = new alertBoxController();
-            sellerController seller = new sellerController();
-            db jdbc = new db();
+            dbUser jdbc = new dbUser();
             String emailId = Email.getText();
             String passwd = Password.getText();
-            Stage stage = new Stage();
             if(jdbc.checkCredentials(emailId, passwd))
             {
-                switch(jdbc.checkUsertype()) {
-                    case 0:
-                        alert.generalError("Usertype not found please contact support");
-                        break;
-                    case 1:
-                        alert.success("Buyer");
-                        break;
-                    case 2:
-                        seller.launch(stage);
-                        break;
-                    case 3:
-                        alert.success("Admin");
-                        break;
-                }
+                close();
+                openHomepage();
             }
             else{
                 alert.generalError("Check Credentials!");
@@ -53,22 +40,42 @@ public class loginController {
     @FXML
     protected void onRegisterButtonClick() {
         try {
-            Stage stage = (Stage) Register.getScene().getWindow();
-            close(stage);
+            close();
             registerController register = new registerController();
-            register.launch(stage);
+            register.launch();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
     }
-    public void launch(Stage stage) throws IOException {
+    public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 320);
+        Stage stage = new Stage();
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
     }
-    public void close(Stage stage) throws IOException {
+    public void close() throws IOException {
+        Stage stage = (Stage) Register.getScene().getWindow();
         stage.hide();
+    }
+    public void openHomepage() throws IOException {
+        dbUser jdbc = new dbUser();
+        alertBoxController alert = new alertBoxController();
+        sellerController seller = new sellerController();
+        switch(jdbc.checkUsertype()) {
+            case 0:
+                alert.generalError("Usertype not found please contact support");
+                break;
+            case 1:
+                alert.success("Buyer");
+                break;
+            case 2:
+                seller.launch();
+                break;
+            case 3:
+                alert.success("Admin");
+                break;
+        }
     }
 }

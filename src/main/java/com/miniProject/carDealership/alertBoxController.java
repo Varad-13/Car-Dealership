@@ -42,9 +42,17 @@ public class alertBoxController {
         alertBoxController.b = "Error!";
         launch();
     }
+    public void exit(String x) throws IOException {
+        alertBoxController.a = x;
+        alertBoxController.b = "Exit?";
+        launch();
+    }
     public void setText() {
         if(a=="Can't connect to internet" || b=="Congratulations!"){
             tryAgain.setVisible(false);
+        }
+        if(b=="Exit?") {
+            tryAgain.setText("Go Back");
         }
         text.setText(a);
     }

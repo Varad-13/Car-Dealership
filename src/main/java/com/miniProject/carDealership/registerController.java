@@ -34,7 +34,7 @@ public class registerController {
         try {
             loginController login = new loginController();
             registerController register = new registerController();
-            db jdbc = new db();
+            dbUser jdbc = new dbUser();
             Stage stage = (Stage) Confirm.getScene().getWindow();
             String fullName = tname.getText();
             String emailId = temail.getText();
@@ -57,8 +57,8 @@ public class registerController {
 
             jdbc.insertLoginDetails(fullName, emailId, password);
             jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob), pincode);
-            register.close(stage);
-            login.launch(stage);
+            register.close();
+            login.launch();
         } catch (IOException | SQLException ex) {
             throw new RuntimeException(ex);
         }
@@ -67,18 +67,19 @@ public class registerController {
     protected void onLoginButtonClicked() throws IOException {
         loginController login = new loginController();
         registerController register = new registerController();
-        Stage stage = (Stage) Confirm.getScene().getWindow();
-        register.close(stage);
-        login.launch(stage);
+        register.close();
+        login.launch();
     }
-    public void launch(Stage stage) throws IOException {
+    public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("register.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 680, 580);
+        Stage stage = new Stage();
         stage.setTitle("Register");
         stage.setScene(scene);
         stage.show();
     }
-    public void close(Stage stage) throws IOException{
+    public void close() throws IOException{
+        Stage stage = (Stage) Confirm.getScene().getWindow();
         stage.hide();
     }
 }

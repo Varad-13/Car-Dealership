@@ -8,7 +8,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="500.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.sellerController">
    <children>
-      <ImageView fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="430.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/userIcon.png" />
          </image>
@@ -18,7 +18,7 @@
             <Image url="@Assets/logo.PNG" />
          </image>
       </ImageView>
-      <ImageView fitHeight="69.0" fitWidth="70.0" layoutX="431.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="69.0" fitWidth="70.0" layoutX="9.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/exitIcon.png" />
          </image>
@@ -63,7 +63,13 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <Button fx:id="exit" layoutX="432.0" layoutY="1.0" mnemonicParsing="false" onAction="#onExitButtonClicked" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="addListing" layoutX="35.0" layoutY="150.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="exit" layoutX="9.0" layoutY="5.0" mnemonicParsing="false" onAction="#onExitButtonClicked" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="addListing" layoutX="34.0" layoutY="149.0" mnemonicParsing="false" onAction="#onAddListingClicked" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="listing1" layoutX="197.0" layoutY="149.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="listing2" layoutX="359.0" layoutY="149.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="buy1" layoutX="34.0" layoutY="330.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="buy2" layoutX="197.0" layoutY="330.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="buy3" layoutX="359.0" layoutY="330.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="userButton" layoutX="425.0" layoutY="4.0" mnemonicParsing="false" onAction="#onUserButtonClicked" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
    </children>
 </Pane>

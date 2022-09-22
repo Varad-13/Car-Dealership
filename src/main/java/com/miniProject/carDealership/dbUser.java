@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.sql.*;
 
 
-public class db {
+public class dbUser {
     private static final String DATABASE_URL = "jdbc:mysql://database-1.cj5xtfkwqhiq.ap-south-1.rds.amazonaws.com/mini_project";
     private static final String DATABASE_USERNAME = "admin";
     private static final String DATABASE_PASSWORD = "genius123";
@@ -12,7 +12,6 @@ public class db {
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
     private static final String CHECK_USERTYPE = "SELECT utype FROM userData WHERE uemail = ?";
     static String email = null;
-
     public Connection connectDatabase() throws IOException {
         try{
             return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
@@ -41,7 +40,7 @@ public class db {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 System.out.println("Login Success");
-                db.email = email;
+                dbUser.email = email;
                 return true;
             }
         } catch (SQLException e) {
@@ -54,7 +53,7 @@ public class db {
     public int checkUsertype(){
         try (Connection connection = connectDatabase();
         PreparedStatement preparedStatement = connection.prepareStatement(CHECK_USERTYPE)){
-            preparedStatement.setString(1, db.email);
+            preparedStatement.setString(1, dbUser.email);
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()) {
                 System.out.println(resultSet.getInt("utype"));

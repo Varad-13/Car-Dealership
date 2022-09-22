@@ -9,10 +9,10 @@ import java.io.IOException;
 public class driver extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        db database = new db();
+        dbUser database = new dbUser();
         if(database.checkConnection()){
             loginController login = new loginController();
-            login.launch(stage);
+            login.launch();
         }
     }
 

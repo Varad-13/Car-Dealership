@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="685.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.userDetailsController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="62.0" maxHeight="580.0" maxWidth="680.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="680.0" style="-fx-background-color: #282a36;">
+         <children>
+            <AnchorPane layoutX="-11.0" layoutY="-70.0" maxHeight="1.7976931348623157E308" prefHeight="587.0" prefWidth="240.0" style="-fx-background-color: #6272a4;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/logo.PNG" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Type">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="radioUser" layoutX="313.0" layoutY="38.0" mnemonicParsing="false" text="User" textFill="#f8f8f2">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Type" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioSeller" layoutX="510.0" layoutY="38.0" mnemonicParsing="false" text="Seller" textFill="#f8f8f2" toggleGroup="$Type">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </RadioButton>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tname" layoutX="241.0" layoutY="83.0" prefHeight="25.0" prefWidth="415.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tnumber" layoutX="241.0" layoutY="133.0" prefHeight="25.0" prefWidth="415.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="taddress" layoutX="241.0" layoutY="182.0" prefHeight="120.0" prefWidth="415.0" style="-fx-control-inner-background: #282a36;">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </TextArea>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="tdob" layoutX="241.0" layoutY="361.0" style="-fx-control-inner-background: #282a36;" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="temail" layoutX="241.0" layoutY="401.0" prefHeight="25.0" prefWidth="415.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="Confirm" layoutX="530.0" layoutY="447.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Confirm Details" textFill="#f8f8f2">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tpincode" layoutX="241.0" layoutY="318.0" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pincode">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Text>
+            <Button fx:id="goBack" layoutX="434.0" layoutY="448.0" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Go Back" textFill="#f8f8f2">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="240.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit User Details">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
