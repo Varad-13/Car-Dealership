@@ -89,6 +89,7 @@ public class dbUser {
     }
 
     public void insertUserData(String name, String email, String address, String number, int type, Date dob, int pincode) throws SQLException, IOException {
+        alertBoxController alert = new alertBoxController();
         try (Connection connection = connectDatabase();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DATA)) {
             preparedStatement.setString(1, name);
@@ -102,7 +103,6 @@ public class dbUser {
         } catch (SQLException e) {
             printSQLException(e);
         } catch (IOException e) {
-            alertBoxController alert = new alertBoxController();
             alert.generalError("Runtime Error!");
             throw new RuntimeException(e);
         }

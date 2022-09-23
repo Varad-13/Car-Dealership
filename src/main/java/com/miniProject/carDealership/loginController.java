@@ -49,7 +49,7 @@ public class loginController {
     }
     public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 320);
+        Scene scene = new Scene(fxmlLoader.load(), 640, 293);
         Stage stage = new Stage();
         stage.setTitle("Login");
         stage.setScene(scene);

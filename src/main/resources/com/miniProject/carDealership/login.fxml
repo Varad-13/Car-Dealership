@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="320.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.loginController">
+<Pane maxHeight="395.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="293.0" prefWidth="640.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.loginController">
    <children>
-      <AnchorPane maxWidth="640.0" prefHeight="222.0" prefWidth="640.0" style="-fx-background-color: #6272a4;" />
-      <TextField fx:id="Email" layoutX="47.0" layoutY="71.0" prefHeight="40.0" prefWidth="550.0" promptText="User ID/Email" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
-      <PasswordField fx:id="Password" layoutX="47.0" layoutY="135.0" prefHeight="40.0" prefWidth="550.0" promptText="Password" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;" />
-      <Hyperlink fx:id="forgotPassword" layoutX="495.0" layoutY="256.0" text="Forgot Password?" textFill="#ff5555" />
-      <Button fx:id="Login" layoutX="47.0" layoutY="252.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Login" textFill="#f8f8f2">
+      <Button fx:id="Login" layoutX="45.0" layoutY="245.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Login" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Register" layoutX="196.0" layoutY="252.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Register" textFill="#f8f8f2">
+      <AnchorPane maxWidth="640.0" prefHeight="227.0" prefWidth="640.0" style="-fx-background-color: #6272a4;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="220.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logo.PNG" />
+               </image>
+            </ImageView>
+            <TextField fx:id="Email" layoutX="45.0" layoutY="91.0" prefHeight="40.0" prefWidth="550.0" promptText="User ID/Email" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2; -fx-border-radius: 4;" />
+            <PasswordField fx:id="Password" layoutX="45.0" layoutY="157.0" prefHeight="40.0" prefWidth="550.0" promptText="Password" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2; -fx-border-radius: 4;" />
+         </children></AnchorPane>
+      <Button fx:id="Register" layoutX="194.0" layoutY="245.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Register" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
+      <Hyperlink fx:id="forgotPassword" layoutX="493.0" layoutY="249.0" text="Forgot Password?" textFill="#ff5555" />
    </children>
 </Pane>
