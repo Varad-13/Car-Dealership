@@ -123,5 +123,6 @@
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
+      <Button layoutX="9.0" layoutY="11.0" mnemonicParsing="false" onAction="#onGoBackClicked" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
    </children>
 </Pane>

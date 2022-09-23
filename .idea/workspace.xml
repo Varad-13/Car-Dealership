@@ -5,7 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3daefad7-15a9-49f8-bea2-72bbdf38f026" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dependencies/mysql-connector-java-8.0.30.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/alertBoxController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/carListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/userDetailsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/carIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/editUserIcon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/exitIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/logo.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/plusIcon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/Assets/userIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/alertBox.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/carList.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/editUserDetails.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/register.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -12,22 +12,23 @@ public class dbUser {
     private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
     private static final String CHECK_USERTYPE = "SELECT utype FROM userData WHERE uemail = ?";
     static String email = null;
+    static int usertype = 4;
     public Connection connectDatabase() throws IOException {
         try{
             return DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
         }catch(SQLException e){
+            alertBoxController alert = new alertBoxController();
             System.out.println("SQL Connection fail!");
+            alert.generalError("Can't connect to internet");
         }
         return null;
     }
-    public boolean checkConnection() throws IOException {
+    public boolean checkConnection() {
         try{
-            DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+            connectDatabase();
             System.out.println("Connection Success");
             return true;
-        } catch(SQLException e){
-            alertBoxController alert = new alertBoxController();
-            alert.generalError("Can't connect to internet");
+        } catch(IOException e){
             return false;
         }
     }
@@ -51,20 +52,25 @@ public class dbUser {
         return false;
     }
     public int checkUsertype(){
-        try (Connection connection = connectDatabase();
-        PreparedStatement preparedStatement = connection.prepareStatement(CHECK_USERTYPE)){
-            preparedStatement.setString(1, dbUser.email);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
-                System.out.println(resultSet.getInt("utype"));
-                return resultSet.getInt("utype");
+        if(dbUser.usertype == 4) {
+            try (Connection connection = connectDatabase();
+                 PreparedStatement preparedStatement = connection.prepareStatement(CHECK_USERTYPE)) {
+                preparedStatement.setString(1, dbUser.email);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()) {
+                    System.out.println(resultSet.getInt("utype"));
+                    dbUser.usertype = resultSet.getInt("utype");
+                    return usertype;
+                } else
+                    return 0;
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
-            else
-                return 0;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        }
+        else {
+            return dbUser.usertype;
         }
     }
     public void insertLoginDetails(String name, String email, String passwd) throws SQLException, IOException {

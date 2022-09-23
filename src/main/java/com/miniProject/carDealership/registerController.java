@@ -28,6 +28,7 @@ public class registerController {
     @FXML
     private DatePicker tdob;
     @FXML
+
     private TextField tpincode;
     @FXML
     protected void onConfirmButtonClick() {
