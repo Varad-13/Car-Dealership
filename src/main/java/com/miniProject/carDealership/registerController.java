@@ -36,7 +36,6 @@ public class registerController {
             loginController login = new loginController();
             registerController register = new registerController();
             dbUser jdbc = new dbUser();
-            Stage stage = (Stage) Confirm.getScene().getWindow();
             String fullName = tname.getText();
             String emailId = temail.getText();
             String password = passwd.getText();
@@ -55,7 +54,6 @@ public class registerController {
                 }
             }
             LocalDate dob = tdob.getValue();
-
             jdbc.insertLoginDetails(fullName, emailId, password);
             jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob), pincode);
             register.close();

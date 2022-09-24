@@ -15,6 +15,7 @@ public class loginController {
     private PasswordField Password;
     @FXML
     private javafx.scene.control.Button Register = new Button();
+    alertBoxController alert = new alertBoxController();
     @FXML
     protected void onLoginButtonClick() {
         System.out.println("Login Button Clicked!");
@@ -47,6 +48,9 @@ public class loginController {
             throw new RuntimeException(ex);
         }
     }
+    public void onForgotPasswordClicked() throws IOException {
+        alert.generalError("Under Construction");
+    }
     public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 293);
@@ -61,14 +65,14 @@ public class loginController {
     }
     public void openHomepage() throws IOException {
         dbUser jdbc = new dbUser();
-        alertBoxController alert = new alertBoxController();
         sellerController seller = new sellerController();
+        userDetailsController userEdit = new userDetailsController();
         switch(jdbc.checkUsertype()) {
             case 0:
                 alert.generalError("Usertype not found please contact support");
                 break;
             case 1:
-                alert.success("Buyer");
+                userEdit.launch();
                 break;
             case 2:
                 seller.launch();
