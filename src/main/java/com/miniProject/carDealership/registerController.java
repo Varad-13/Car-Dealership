@@ -31,7 +31,7 @@ public class registerController {
 
     private TextField tpincode;
     @FXML
-    protected void onConfirmButtonClick() {
+    protected void onConfirmButtonClick() throws IOException, SQLException {
         try {
             loginController login = new loginController();
             registerController register = new registerController();
@@ -58,8 +58,8 @@ public class registerController {
             jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob), pincode);
             register.close();
             login.launch();
-        } catch (IOException | SQLException ex) {
-            throw new RuntimeException(ex);
+        } catch (NumberFormatException e) {
+            throw new RuntimeException(e);
         }
     }
     @FXML
