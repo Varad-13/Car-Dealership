@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class carListController {
+    loginController login = new loginController();
     @FXML
     private javafx.scene.control.Button goBack;
     @FXML
@@ -25,19 +26,20 @@ public class carListController {
     private TextField yearOfManufacture;
     @FXML
     public void onGoBackClicked() throws IOException {
-        loginController login = new loginController();
         close();
         login.openHomepage();
     }
     public void onConfirmButtonClicked() throws IOException {
-        alertBoxController alert = new alertBoxController();
+        dbCars carDb = new dbCars();
         String man = manufacturer.getText();
         String mod = model.getText();
         String reg = registrationNumber.getText();
         int pri = Integer.parseInt(price.getText());
         int year = Integer.parseInt(yearOfManufacture.getText());
         String chassis = chassisNumber.getText();
-        alert.success(man+mod+reg+pri+year+chassis);
+        carDb.insertCarDetails(man, mod, reg, pri, year, chassis);
+        close();
+        login.openHomepage();
     }
     public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("carList.fxml"));
