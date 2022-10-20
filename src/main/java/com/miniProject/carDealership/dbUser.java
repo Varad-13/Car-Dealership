@@ -4,15 +4,15 @@ import java.sql.*;
 
 
 public class dbUser {
-    private static final String DATABASE_URL = "jdbc:mysql://database-1.cj5xtfkwqhiq.ap-south-1.rds.amazonaws.com/mini_project";
-    private static final String DATABASE_USERNAME = "admin";
-    private static final String DATABASE_PASSWORD = "genius123";
-    private static final String INSERT_LOGIN = "INSERT INTO loginDetails (uname, uemail, upasswd) VALUES (?, ?, MD5(?))";
-    private static final String INSERT_DATA = "INSERT INTO userData (uname, uemail, uadd, unum, utype, uDob, upincode) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    private static final String CHECK_CREDENTIALS = "SELECT * FROM loginDetails WHERE uemail = ? and upasswd = MD5(?)";
-    private static final String CHECK_USERTYPE = "SELECT utype FROM userData WHERE uemail = ?";
-    private static final String UPDATE_DATA = "UPDATE userData SET uadd = ?, unum = ?, utype = ?, upincode = ? WHERE uemail = ?";
-    private static final String GET_USER_DETAILS = "SELECT * FROM userData WHERE uemail = ?";
+    private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/mini_project";
+    private static final String DATABASE_USERNAME = "root";
+    private static final String DATABASE_PASSWORD = "root";
+    private static final String INSERT_LOGIN = "INSERT INTO logindetails (uemail, upasswd) VALUES (?, MD5(?))";
+    private static final String INSERT_DATA = "INSERT INTO userdata (uname, uemail, uadd, unum, utype, uDob, upincode) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    private static final String CHECK_CREDENTIALS = "SELECT * FROM logindetails WHERE uemail = ? and upasswd = MD5(?)";
+    private static final String CHECK_USERTYPE = "SELECT utype FROM userdata WHERE uemail = ?";
+    private static final String UPDATE_DATA = "UPDATE userdata SET uadd = ?, unum = ?, utype = ?, upincode = ? WHERE uemail = ?";
+    private static final String GET_USER_DETAILS = "SELECT * FROM userdata WHERE uemail = ?";
     static String email = null;
     static int usertype = 4;
     static String name = null;
@@ -78,12 +78,11 @@ public class dbUser {
             return dbUser.usertype;
         }
     }
-    public void insertLoginDetails(String name, String email, String passwd) throws IOException {
+    public void insertLoginDetails(String email, String passwd) throws IOException {
         try (Connection connection = connectDatabase();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOGIN)) {
-            preparedStatement.setString(1, name);
-            preparedStatement.setString(2, email);
-            preparedStatement.setString(3, passwd);
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, passwd);
             preparedStatement.executeUpdate();
             System.out.println("User registration successful");
         } catch (SQLException e) {

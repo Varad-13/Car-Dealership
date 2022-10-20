@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="869.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.carEditController">
+   <children>
+      <AnchorPane prefHeight="79.0" prefWidth="869.0" style="-fx-background-color: #6272a4;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="335.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logo.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="73.0" layoutX="793.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/userIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="69.0" fitWidth="70.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/exitIcon.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="30.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufacturer">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imageView1" fitHeight="160.0" fitWidth="193.0" layoutX="28.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/plusIcon.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="32.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="price" editable="false" layoutX="169.0" layoutY="311.0" prefHeight="31.0" prefWidth="189.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="goBack" layoutX="730.0" layoutY="598.0" mnemonicParsing="false" onAction="#onGoBackClicked" prefHeight="59.0" prefWidth="125.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Go Back" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="9.0" layoutY="11.0" mnemonicParsing="false" onAction="#onGoBackClicked" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="190.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Model">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imageView2" fitHeight="160.0" fitWidth="193.0" layoutX="192.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/plusIcon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView3" fitHeight="160.0" fitWidth="193.0" layoutX="355.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/plusIcon.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="28.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Features">
+         <font>
+            <Font name="Segoe UI Bold" size="21.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="convertible" layoutX="426.0" layoutY="608.0" mnemonicParsing="false" text="Convertible" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sunroof" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="sunroofNo" layoutX="426.0" layoutY="576.0" mnemonicParsing="false" selected="true" text="No" textFill="#f8f8f2" toggleGroup="$sunroof">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="sunroofYes" layoutX="425.0" layoutY="546.0" mnemonicParsing="false" text="Yes" textFill="#f8f8f2" toggleGroup="$sunroof">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="425.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunroof">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="30.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Air Conditioning">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="acNo" layoutX="127.0" layoutY="541.0" mnemonicParsing="false" selected="true" text="No" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="AC" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="acYes" layoutX="30.0" layoutY="541.0" mnemonicParsing="false" text="Yes" textFill="#f8f8f2" toggleGroup="$AC">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="79.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(working)">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="219.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Power Steering">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="psYes" layoutX="217.0" layoutY="541.0" mnemonicParsing="false" text="Yes" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="powerSteering" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="psNo" layoutX="314.0" layoutY="541.0" mnemonicParsing="false" selected="true" text="No" textFill="#f8f8f2" toggleGroup="$powerSteering">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="55.0" layoutY="601.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fog Lamps">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="flYes" layoutX="33.0" layoutY="615.0" mnemonicParsing="false" text="Yes" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="fogLamp" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="flNo" layoutX="130.0" layoutY="615.0" mnemonicParsing="false" selected="true" text="No" textFill="#f8f8f2" toggleGroup="$fogLamp">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="alsNo" layoutX="314.0" layoutY="615.0" mnemonicParsing="false" selected="true" text="No" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="als" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="alsYes" layoutX="217.0" layoutY="615.0" mnemonicParsing="false" text="Yes" textFill="#f8f8f2" toggleGroup="$als">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </RadioButton>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="209.0" layoutY="601.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anti Lock Braking">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="windshieldDam" layoutX="569.0" layoutY="460.0" mnemonicParsing="false" text="Windows/Windshield/Sunroof" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="clutchDam" layoutX="570.0" layoutY="393.0" mnemonicParsing="false" text="Clutch / Flywheel assembly" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="brakeDam" layoutX="570.0" layoutY="427.0" mnemonicParsing="false" text="Brakes" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="engineDam" layoutX="570.0" layoutY="360.0" mnemonicParsing="false" text="Engine" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="570.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Damage">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="delete" layoutX="103.0" layoutY="364.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="167.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Buy Now" textFill="#f8f8f2">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="mirrorDam" layoutX="569.0" layoutY="595.0" mnemonicParsing="false" text="Mirrors" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="paintDam" layoutX="569.0" layoutY="562.0" mnemonicParsing="false" text="Paint" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="lampDam" layoutX="569.0" layoutY="528.0" mnemonicParsing="false" text="Lamps" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="bodyDam" layoutX="569.0" layoutY="495.0" mnemonicParsing="false" text="Body Damage" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="663.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="name">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="527.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller Name">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="524.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller Contact">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="659.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="phone">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="524.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Description">
+         <font>
+            <Font name="Segoe UI" size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="mods" editable="false" layoutX="526.0" layoutY="229.0" prefHeight="31.0" prefWidth="336.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="price1" editable="false" layoutX="24.0" layoutY="458.0" prefHeight="31.0" prefWidth="175.0" promptText="Color" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="price11" editable="false" layoutX="202.0" layoutY="458.0" prefHeight="31.0" prefWidth="175.0" promptText="Engine" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="price12" editable="false" layoutX="381.0" layoutY="458.0" prefHeight="31.0" prefWidth="175.0" promptText="Transmission" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

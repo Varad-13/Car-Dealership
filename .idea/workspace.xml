@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3daefad7-15a9-49f8-bea2-72bbdf38f026" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbCars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/buyerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/carEditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/carFeatureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/conversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbCarDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/carFeatures.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/carListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/carListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/dbUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/registerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/miniProject/carDealership/sellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/carList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/carList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/miniProject/carDealership/sellerHomepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +66,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Varad/Desktop/Mini Project/dependencies/mysql-connector-java-8.0.30.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.37241378&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">

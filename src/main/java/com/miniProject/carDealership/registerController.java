@@ -54,7 +54,7 @@ public class registerController {
                 }
             }
             LocalDate dob = tdob.getValue();
-            jdbc.insertLoginDetails(fullName, emailId, password);
+            jdbc.insertLoginDetails(emailId, password);
             jdbc.insertUserData(fullName, emailId, address, number, type, Date.valueOf(dob), pincode);
             register.close();
             login.launch();

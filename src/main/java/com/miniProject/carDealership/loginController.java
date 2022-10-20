@@ -66,13 +66,13 @@ public class loginController {
     public void openHomepage() throws IOException {
         dbUser jdbc = new dbUser();
         sellerController seller = new sellerController();
-        userDetailsController userEdit = new userDetailsController();
+        buyerController user = new buyerController();
         switch(jdbc.checkUsertype()) {
             case 0:
                 alert.generalError("Usertype not found please contact support");
                 break;
             case 1:
-                userEdit.launch();
+                user.launch();
                 break;
             case 2:
                 seller.launch();

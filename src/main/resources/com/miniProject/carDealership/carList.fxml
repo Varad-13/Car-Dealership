@@ -6,14 +6,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="570.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.carListController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="614.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.carListController">
    <children>
-      <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="496.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/userIcon.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="185.0" pickOnBounds="true" preserveRatio="true">
+      <AnchorPane prefHeight="79.0" prefWidth="614.0" style="-fx-background-color: #6272a4;">
+         <children>
+            <Label layoutX="294.0" layoutY="15.0" text="Edit Car Details :" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="87.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/logo.PNG" />
          </image>
@@ -23,116 +27,92 @@
             <Image url="@Assets/exitIcon.png" />
          </image>
       </ImageView>
-      <Label layoutX="202.0" layoutY="71.0" text="Edit Car Details" textFill="WHITE">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufacturer">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufacturer">
          <font>
             <Font name="Segoe UI" size="21.0" />
          </font>
       </Text>
-      <ImageView fitHeight="221.0" fitWidth="259.0" layoutX="7.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView1" fitHeight="207.0" fitWidth="193.0" layoutX="16.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/plusIcon.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="manufacturer" layoutX="237.0" layoutY="121.0" prefHeight="31.0" prefWidth="295.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+      <TextField fx:id="manufacturer" layoutX="237.0" layoutY="91.0" prefHeight="31.0" prefWidth="353.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="232.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="232.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="335.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="335.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="438.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="438.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Price">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Price">
          <font>
             <Font name="Segoe UI" size="21.0" />
          </font>
       </Text>
-      <TextField fx:id="price" layoutX="237.0" layoutY="416.0" prefHeight="31.0" prefWidth="295.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+      <TextField fx:id="price" layoutX="237.0" layoutY="386.0" prefHeight="31.0" prefWidth="353.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chassis Number">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chassis Number">
          <font>
             <Font name="Segoe UI" size="21.0" />
          </font>
       </Text>
-      <TextField fx:id="chassisNumber" layoutX="237.0" layoutY="454.0" prefHeight="31.0" prefWidth="295.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+      <TextField fx:id="chassisNumber" layoutX="237.0" layoutY="424.0" prefHeight="31.0" prefWidth="353.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="yearOfManufacture" layoutX="237.0" layoutY="492.0" prefHeight="31.0" prefWidth="295.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+      <TextField fx:id="yearOfManufacture" layoutX="237.0" layoutY="462.0" prefHeight="31.0" prefWidth="353.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="registrationNumber" layoutX="237.0" layoutY="531.0" prefHeight="31.0" prefWidth="295.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+      <TextField fx:id="registrationNumber" layoutX="237.0" layoutY="501.0" prefHeight="31.0" prefWidth="353.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Number">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Number">
          <font>
             <Font name="Segoe UI" size="21.0" />
          </font>
       </Text>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year of Manufacture">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="26.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year of Manufacture">
          <font>
             <Font name="Segoe UI" size="21.0" />
          </font>
       </Text>
-      <Button fx:id="goBack" layoutX="327.0" layoutY="584.0" mnemonicParsing="false" onAction="#onGoBackClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Go Back" textFill="#f8f8f2">
+      <Button fx:id="goBack" layoutX="378.0" layoutY="553.0" mnemonicParsing="false" onAction="#onGoBackClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-border-color: #50fa7b; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Go Back" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Confirm" layoutX="423.0" layoutY="583.0" mnemonicParsing="false" onAction="#onConfirmButtonClicked" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Confirm Details" textFill="#f8f8f2">
+      <Button fx:id="Confirm" layoutX="475.0" layoutY="553.0" mnemonicParsing="false" onAction="#onConfirmButtonClicked" prefHeight="30.0" prefWidth="126.0" style="-fx-border-color: #bd93f9; -fx-background-color: #282a36; -fx-border-radius: 7;" text="Confirm Details" textFill="#f8f8f2">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </Button>
       <Button layoutX="9.0" layoutY="11.0" mnemonicParsing="false" onAction="#onGoBackClicked" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
-      <TextField fx:id="model" layoutX="237.0" layoutY="165.0" prefHeight="31.0" prefWidth="295.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+      <TextField fx:id="model" layoutX="237.0" layoutY="135.0" prefHeight="31.0" prefWidth="353.0" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font>
       </TextField>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Model">
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="24.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Model">
          <font>
             <Font name="Segoe UI" size="21.0" />
          </font>
       </Text>
+      <ImageView fx:id="imageView2" fitHeight="207.0" fitWidth="193.0" layoutX="209.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/plusIcon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView3" fitHeight="207.0" fitWidth="193.0" layoutX="402.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/plusIcon.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="imageButton1" layoutY="170.0" mnemonicParsing="false" onAction="#upload" prefHeight="207.0" prefWidth="614.0" style="-fx-background-color: transparent;" text="Button" />
    </children>
 </Pane>

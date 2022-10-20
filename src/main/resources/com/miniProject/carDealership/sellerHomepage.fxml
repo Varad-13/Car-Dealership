@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="500.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.sellerController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="500.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.sellerController">
    <children>
       <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="430.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,53 +23,63 @@
             <Image url="@Assets/exitIcon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="157.0" fitWidth="147.0" layoutX="14.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView1" fitHeight="157.0" fitWidth="147.0" layoutX="14.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/plusIcon.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="157.0" fitWidth="147.0" layoutX="177.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView2" fitHeight="157.0" fitWidth="147.0" layoutX="177.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/plusIcon.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="157.0" fitWidth="147.0" layoutX="339.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView3" fitHeight="157.0" fitWidth="147.0" layoutX="339.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/plusIcon.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="157.0" fitWidth="147.0" layoutX="14.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="157.0" fitWidth="147.0" layoutX="177.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="157.0" fitWidth="147.0" layoutX="339.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Assets/plusIcon.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="14.0" layoutY="79.0" text="Manage Listings" textFill="WHITE">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="272.0" text="Buy Vehicles" textFill="WHITE">
+      <Label layoutX="14.0" layoutY="144.0" text="Manage Listings" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
       <Button fx:id="exit" layoutX="9.0" layoutY="5.0" mnemonicParsing="false" onAction="#onExitButtonClicked" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="addListing" layoutX="34.0" layoutY="149.0" mnemonicParsing="false" onAction="#onAddListingClicked" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
-      <Button fx:id="listing1" layoutX="197.0" layoutY="149.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
-      <Button fx:id="listing2" layoutX="359.0" layoutY="149.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
-      <Button fx:id="buy1" layoutX="34.0" layoutY="330.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
-      <Button fx:id="buy2" layoutX="197.0" layoutY="330.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
-      <Button fx:id="buy3" layoutX="359.0" layoutY="330.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="addListing" layoutX="47.0" layoutY="83.0" mnemonicParsing="false" onAction="#onAddListingClicked" prefHeight="58.0" prefWidth="410.0" text="Add Listing" />
+      <Button fx:id="listing2" layoutX="197.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button fx:id="listing3" layoutX="359.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
       <Button fx:id="userButton" layoutX="425.0" layoutY="4.0" mnemonicParsing="false" onAction="#onUserButtonClicked" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="next" layoutX="415.0" layoutY="366.0" mnemonicParsing="false" onAction="#nextButtonClicked" text="View more" />
+      <Button fx:id="previous" layoutX="342.0" layoutY="366.0" mnemonicParsing="false" onAction="#previousButtonClicked" text="View last" />
+      <Button fx:id="listing1" layoutX="34.0" layoutY="214.0" mnemonicParsing="false" onAction="#onListing1Clicked" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" text="Button" />
+      <Label fx:id="man1" layoutX="37.0" layoutY="317.0" text="Manufacturer" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="man2" layoutX="199.0" layoutY="317.0" text="Manufacturer" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="man3" layoutX="362.0" layoutY="317.0" text="Manufacturer" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="mod1" layoutX="63.0" layoutY="335.0" text="Model" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="mod2" layoutX="225.0" layoutY="335.0" text="Model" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="mod3" layoutX="388.0" layoutY="335.0" text="Model" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
