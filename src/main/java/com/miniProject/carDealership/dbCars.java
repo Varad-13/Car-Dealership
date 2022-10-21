@@ -2,14 +2,15 @@ package com.miniProject.carDealership;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 
 public class dbCars {
     private static final String Insert_Car = "INSERT INTO carDetails (manufacturer, model, registrationNumber, price, yearOfManufacture, chassisNumber, sellerEmail, image1, image2, image3) Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String Retrive_Car = "SELECT * FROM carDetails WHERE sellerEmail = ? ORDER BY idcarDetails DESC";
-    private static final String Update = "UPDATE carDetails SET price = ?, color = ?, engine = ?, transmission = ?, mods = ?, sunroof = ?, ac = ?, powerSteering = ?, fogLamps = ?, antiLockBraking = ?, bodyDam = ?, engineDam = ?, clutchDam = ?, lampDam = ?, windowDam = ?, brakeDam = ?, paintDam = ?, mirrorDam = ? WHERE idcarDetails = ?";
+    private static final String Update = "UPDATE carDetails SET price = ?, color = ?, engine = ?, transmission = ?, mods = ?, sunroof = ?, ac = ?, powerSteering = ?, fogLamps = ?, antiLockBraking = ?, bodyDam = ?, engineDam = ?, clutchDam = ?, lampDam = ?, windowDam = ?, brakeDam = ?, paintDam = ?, mirrorDam = ? WHERE idcarDetails = ? AND sold = 0";
     private static final String get_car = "SELECT * FROM carDetails ORDER BY idcarDetails DESC";
+    private static final String mark_sold = "UPDATE carDetails SET sold = 1 where idcarDetails=?";
+    private static final String delete = "DELETE from carDetails WHERE idcarDetails = ?";
     static dbUser jdbc = new dbUser();
     private static int carId;
     private static int price;
@@ -101,6 +102,7 @@ public class dbCars {
                 if(carData.next()){
                     if(i==1){
                         this.carId = carData.getInt("idcarDetails");
+                        System.out.println(carId);
                         return carId;
                     }
                 }
@@ -123,6 +125,22 @@ public class dbCars {
                 i--;
             }
             return 0;
+        }
+    }
+    public boolean delete() throws SQLException, IOException {
+        try (Connection connection = jdbc.connectDatabase();
+             PreparedStatement preparedStatement = connection.prepareStatement(delete)){
+            preparedStatement.setInt(1, this.carId);
+            preparedStatement.executeUpdate();
+            return true;
+        }
+    }
+    public boolean buy() throws SQLException, IOException {
+        try (Connection connection = jdbc.connectDatabase();
+             PreparedStatement preparedStatement = connection.prepareStatement(mark_sold)){
+            preparedStatement.setInt(1, dbCarDisplay.carId);
+            preparedStatement.executeUpdate();
+            return true;
         }
     }
 }

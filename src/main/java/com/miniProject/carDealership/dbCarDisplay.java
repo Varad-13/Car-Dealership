@@ -39,6 +39,7 @@ public class dbCarDisplay {
     public static Boolean paintDam;
     public static Boolean windowDam;
     public static Boolean mirrorDam;
+    public static int carId;
     public void getCarDetails(int idcarDetails) throws SQLException, IOException {
         try (Connection connection = jdbc.connectDatabase();
              PreparedStatement preparedStatement = connection.prepareStatement(Get_Features)) {
@@ -72,6 +73,7 @@ public class dbCarDisplay {
                 this.paintDam = rs.getBoolean("paintDam");
                 this.windowDam = rs.getBoolean("windowDam");
                 this.mirrorDam = rs.getBoolean("mirrorDam");
+                this.carId = rs.getInt("idCarDetails");
             }
         }
     }

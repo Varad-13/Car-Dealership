@@ -1,12 +1,10 @@
 package com.miniProject.carDealership;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -17,7 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class carEditController {
+public class buyCarController {
     @FXML
     private ImageView imageView1 = new ImageView();
     @FXML
@@ -70,7 +68,7 @@ public class carEditController {
     dbCars cars = new dbCars();
     alertBoxController alert = new alertBoxController();
     public void launch() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("editCarDetails.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("buyCar.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 869, 765);
         Stage stage = new Stage();
         stage.setTitle("Driftstore");
@@ -103,58 +101,15 @@ public class carEditController {
         if(dbCarDisplay.windowDam){windshieldDam.setSelected(true);}
         if(dbCarDisplay.mirrorDam){mirrorDam.setSelected(true);}
     }
-    public void Confirm() throws IOException, SQLException {
-        String color = this.color.getText();
-        String engine = this.engine.getText();
-        String transmission = this.transmission.getText();
-        String mods = this.mods.getText();
-        int price = Integer.parseInt(this.price.getText());
-        boolean ac;
-        boolean ps;
-        boolean fl;
-        boolean als;
-        boolean engineDam, bodyDam, clutchDam, lampDam, brakeDam, paintDam, windshieldDam, mirrorDam;
-        if(acYes.isSelected()){ac = true;}
-        else {ac = false;}
-        if(psYes.isSelected()){ps = true;}
-        else{ps = false;}
-        if(flYes.isSelected()){fl = true;}
-        else{fl = false;}
-        if(alsYes.isSelected()){als = true;}
-        else{als = false;}
-        int sunroof;
-        if(sunroofYes.isSelected()){sunroof = 1;} else if (convertible.isSelected()) {sunroof = 2;}
-        else{sunroof = 0;}
-        if(this.bodyDam.isSelected()){bodyDam = true;}
-        else{bodyDam = false;}
-        if(this.engineDam.isSelected()){engineDam = true;}
-        else{engineDam = false;}
-        if(this.clutchDam.isSelected()){clutchDam = true;}
-        else{clutchDam = false;}
-        if(this.lampDam.isSelected()){lampDam = true;}
-        else{lampDam = false;}
-        if(this.brakeDam.isSelected()){brakeDam = true;}
-        else{brakeDam = false;}
-        if(this.paintDam.isSelected()){paintDam = true;}
-        else{paintDam = false;}
-        if(this.windshieldDam.isSelected()){windshieldDam = true;}
-        else {windshieldDam = false;}
-        if(this.mirrorDam.isSelected()){mirrorDam=true;}
-        else{mirrorDam=false;}
-        cars.updateCarFeatures(price, color, engine, transmission, sunroof, mods, ac, ps, fl, als, bodyDam, engineDam, clutchDam, lampDam, brakeDam, paintDam, windshieldDam, mirrorDam);
-        alert.success("Successfully added to database!");
-    }
     public void close() throws IOException {
         Stage stage = (Stage) flYes.getScene().getWindow();
         stage.hide();
     }
-    public void onGoBackClicked() throws IOException {
-        close();
-    }
-    public void delete() throws SQLException, IOException {
-        if(cars.delete()){
-            alert.success("Deleted");
-            close();
+
+    public void buy() throws SQLException, IOException {
+        dbCars cars = new dbCars();
+        if(cars.buy()){
+            alert.success("Congratulations on your purchase");
         }
     }
 }

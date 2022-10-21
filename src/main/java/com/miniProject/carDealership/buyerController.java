@@ -47,6 +47,7 @@ public class buyerController {
     dbCars car = new dbCars();
     dbCarDisplay display = new dbCarDisplay();
     alertBoxController alert = new alertBoxController();
+    buyCarController buy = new buyCarController();
     public void launch() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(driver.class.getResource("userHomepage.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 303);
@@ -130,13 +131,16 @@ public class buyerController {
         }
     }
     public void onListing1Clicked() throws SQLException, IOException {
-        display.getCarDetails(car.getCarId(i, dbUser.email));
+        display.getCarDetails(car.getCarId(i));
+        buy.launch();
     }
     public void onListing2Clicked() throws SQLException, IOException {
-        display.getCarDetails(car.getCarId(i+1, dbUser.email));
+        display.getCarDetails(car.getCarId(i+1));
+        buy.launch();
     }
     public void onListing3Clicked() throws SQLException, IOException {
-        display.getCarDetails(car.getCarId(i+2, dbUser.email));
+        display.getCarDetails(car.getCarId(i+2));
+        buy.launch();
     }
     @FXML
     public void onUserButtonClicked() throws IOException {
@@ -169,4 +173,5 @@ public class buyerController {
             displaySellerImage();
         }
     }
+
 }
