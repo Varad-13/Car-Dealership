@@ -68,13 +68,19 @@ public class buyerController {
     public void displaySellerImage() throws SQLException, IOException {
         conversion img = new conversion();
         WritableImage image1 = img.getImage(display.getCar(i));
+        String manu1 = dbCarDisplay.manufacturer;
+        String model1 = dbCarDisplay.model;
         WritableImage image2 = img.getImage(display.getCar(i+1));
+        String manu2 = dbCarDisplay.manufacturer;
+        String model2 = dbCarDisplay.model;
         WritableImage image3 = img.getImage(display.getCar(i+2));
+        String manu3 = dbCarDisplay.manufacturer;
+        String model3 = dbCarDisplay.model;
         if(image1!=null) {
             man1.setVisible(true);
             mod1.setVisible(true);
-            man1.setText(dbCarDisplay.manufacturer);
-            mod1.setText(dbCarDisplay.model);
+            man1.setText(manu1);
+            mod1.setText(model1);
             imageView1.setVisible(true);
             imageView1.setImage(image1);
         }
@@ -97,8 +103,8 @@ public class buyerController {
         if(image2!=null) {
             man2.setVisible(true);
             mod2.setVisible(true);
-            man2.setText(dbCarDisplay.manufacturer);
-            mod2.setText(dbCarDisplay.model);
+            man2.setText(manu2);
+            mod2.setText(model2);
             imageView2.setVisible(true);
             imageView2.setImage(image2);
         }
@@ -117,8 +123,8 @@ public class buyerController {
         if(image3!=null) {
             man3.setVisible(true);
             mod3.setVisible(true);
-            man3.setText(dbCarDisplay.manufacturer);
-            mod3.setText(dbCarDisplay.model);
+            man3.setText(manu3);
+            mod3.setText(model3);
             imageView3.setVisible(true);
             imageView3.setImage(image3);
         }

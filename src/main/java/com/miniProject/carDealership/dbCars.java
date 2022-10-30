@@ -7,8 +7,8 @@ import java.sql.*;
 public class dbCars {
     private static final String Insert_Car = "INSERT INTO carDetails (manufacturer, model, registrationNumber, price, yearOfManufacture, chassisNumber, sellerEmail, image1, image2, image3) Values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String Retrive_Car = "SELECT * FROM carDetails WHERE sellerEmail = ? ORDER BY idcarDetails DESC";
-    private static final String Update = "UPDATE carDetails SET price = ?, color = ?, engine = ?, transmission = ?, mods = ?, sunroof = ?, ac = ?, powerSteering = ?, fogLamps = ?, antiLockBraking = ?, bodyDam = ?, engineDam = ?, clutchDam = ?, lampDam = ?, windowDam = ?, brakeDam = ?, paintDam = ?, mirrorDam = ? WHERE idcarDetails = ? AND sold = 0";
-    private static final String get_car = "SELECT * FROM carDetails ORDER BY idcarDetails DESC";
+    private static final String Update = "UPDATE carDetails SET price = ?, color = ?, engine = ?, transmission = ?, mods = ?, sunroof = ?, ac = ?, powerSteering = ?, fogLamps = ?, antiLockBraking = ?, bodyDam = ?, engineDam = ?, clutchDam = ?, lampDam = ?, windowDam = ?, brakeDam = ?, paintDam = ?, mirrorDam = ? WHERE idcarDetails = ?";
+    private static final String get_car = "SELECT * FROM carDetails WHERE sold = 0 ORDER BY idcarDetails DESC";
     private static final String mark_sold = "UPDATE carDetails SET sold = 1 where idcarDetails=?";
     private static final String delete = "DELETE from carDetails WHERE idcarDetails = ?";
     static dbUser jdbc = new dbUser();
@@ -119,6 +119,7 @@ public class dbCars {
                 if(carData.next()){
                     if(i==1){
                         this.carId = carData.getInt("idcarDetails");
+                        System.out.println(carId);
                         return carId;
                     }
                 }

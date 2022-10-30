@@ -11,7 +11,7 @@ public class dbCarDisplay {
     dbUser jdbc = new dbUser();
     private static final String Get_Features = "SELECT * FROM carDetails WHERE idcarDetails = ?";
     private static final String Retrive_Car = "SELECT * FROM carDetails WHERE sellerEmail = ? ORDER BY idcarDetails DESC";
-    private static final String get_car = "SELECT * FROM carDetails ORDER BY idcarDetails DESC";
+    private static final String get_car = "SELECT * FROM carDetails WHERE sold = 0 ORDER BY idcarDetails DESC";
     public static String manufacturer;
     private static String chassisNumber;
     private static String registrationNumber;
