@@ -74,7 +74,7 @@ public class carListController {
         int year = Integer.parseInt(yearOfManufacture.getText());
         String chassis = chassisNumber.getText();
         carDb.insertCarDetails(man, mod, reg, pri, year, chassis, picture1, picture2, picture3, length1, length2, length3);
-        carDb.getCarId(1, email);
+        //carDb.getCarId(1, email);
         close();
         feature.launch();
     }

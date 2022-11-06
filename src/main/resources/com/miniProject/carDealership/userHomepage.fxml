@@ -91,10 +91,15 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="filters" layoutX="56.0" layoutY="279.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-border-color: #f1fa8c; -fx-border-radius: 7;" text="Filters" textFill="WHITE">
+      <Button fx:id="filters" layoutX="192.0" layoutY="279.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-border-color: #f1fa8c; -fx-border-radius: 7;" text="Apply" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <TextField fx:id="price" layoutX="9.0" layoutY="279.0" prefHeight="31.0" prefWidth="173.0" promptText="Maximum Price" style="-fx-background-color: #282a36; -fx-border-color: #f8f8f2; -fx-text-fill: #f8f8f2;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
    </children>
 </Pane>

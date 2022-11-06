@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="500.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.sellerController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="500.0" style="-fx-background-color: #282a36;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miniProject.carDealership.sellerController">
    <children>
       <AnchorPane layoutX="-1.0" prefHeight="69.0" prefWidth="500.0" style="-fx-background-color: #6272a4;" />
       <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="430.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -49,11 +49,11 @@
          <font>
             <Font size="22.0" />
          </font></Button>
-      <Button fx:id="listing2" layoutX="197.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="listing3" layoutX="359.0" layoutY="214.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="listing2" layoutX="197.0" layoutY="214.0" mnemonicParsing="false" onAction="#onListing2Clicked" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="listing3" layoutX="359.0" layoutY="214.0" mnemonicParsing="false" onAction="#onListing3Clicked" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" />
       <Button fx:id="userButton" layoutX="425.0" layoutY="4.0" mnemonicParsing="false" onAction="#onUserButtonClicked" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="next" layoutX="416.0" layoutY="406.0" mnemonicParsing="false" onAction="#nextButtonClicked" style="-fx-background-color: transparent; -fx-border-color: #f1fa8c; -fx-border-radius: 7;" text="View more" textFill="WHITE" />
-      <Button fx:id="previous" layoutX="343.0" layoutY="406.0" mnemonicParsing="false" onAction="#previousButtonClicked" style="-fx-background-color: transparent; -fx-border-color: #f1fa8c; -fx-border-radius: 7;" text="View last" textFill="WHITE" />
+      <Button fx:id="next" layoutX="416.0" layoutY="368.0" mnemonicParsing="false" onAction="#nextButtonClicked" style="-fx-background-color: transparent; -fx-border-color: #f1fa8c; -fx-border-radius: 7;" text="View more" textFill="WHITE" />
+      <Button fx:id="previous" layoutX="343.0" layoutY="368.0" mnemonicParsing="false" onAction="#previousButtonClicked" style="-fx-background-color: transparent; -fx-border-color: #f1fa8c; -fx-border-radius: 7;" text="View last" textFill="WHITE" />
       <Button fx:id="listing1" layoutX="34.0" layoutY="214.0" mnemonicParsing="false" onAction="#onListing1Clicked" prefHeight="100.0" prefWidth="107.0" style="-fx-background-color: transparent;" />
       <Label fx:id="man1" layoutX="37.0" layoutY="317.0" text="Manufacturer" textFill="WHITE">
          <font>
@@ -81,21 +81,6 @@
          </font>
       </Label>
       <Label fx:id="mod3" layoutX="363.0" layoutY="335.0" text="Model" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="price3" layoutX="363.0" layoutY="353.0" text="Price" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="price2" layoutX="200.0" layoutY="353.0" text="Price" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="price1" layoutX="38.0" layoutY="353.0" text="Price" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>

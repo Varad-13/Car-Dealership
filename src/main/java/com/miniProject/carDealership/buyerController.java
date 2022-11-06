@@ -43,6 +43,12 @@ public class buyerController {
     private Label mod2 = new Label();
     @FXML
     private Label mod3 = new Label();
+    @FXML
+    private Label price1 = new Label();
+    @FXML
+    private Label price2 = new Label();
+    @FXML
+    private Label price3 = new Label();
     int i;
     dbCars car = new dbCars();
     dbCarDisplay display = new dbCarDisplay();
@@ -70,17 +76,22 @@ public class buyerController {
         WritableImage image1 = img.getImage(display.getCar(i));
         String manu1 = dbCarDisplay.manufacturer;
         String model1 = dbCarDisplay.model;
+        int pri1 = dbCarDisplay.price;
         WritableImage image2 = img.getImage(display.getCar(i+1));
         String manu2 = dbCarDisplay.manufacturer;
         String model2 = dbCarDisplay.model;
+        int pri2 = dbCarDisplay.price;
         WritableImage image3 = img.getImage(display.getCar(i+2));
         String manu3 = dbCarDisplay.manufacturer;
         String model3 = dbCarDisplay.model;
+        int pri3 = dbCarDisplay.price;
         if(image1!=null) {
             man1.setVisible(true);
             mod1.setVisible(true);
+            price1.setVisible(true);
             man1.setText(manu1);
             mod1.setText(model1);
+            price1.setText(String.valueOf(pri1));
             imageView1.setVisible(true);
             imageView1.setImage(image1);
         }
@@ -91,6 +102,9 @@ public class buyerController {
             mod1.setVisible(false);
             mod2.setVisible(false);
             mod3.setVisible(false);
+            price1.setVisible(false);
+            price2.setVisible(false);
+            price3.setVisible(false);
             next.setVisible(false);
             imageView1.setVisible(false);
             imageView2.setVisible(false);
@@ -103,8 +117,10 @@ public class buyerController {
         if(image2!=null) {
             man2.setVisible(true);
             mod2.setVisible(true);
+            price2.setVisible(true);
             man2.setText(manu2);
             mod2.setText(model2);
+            price2.setText(String.valueOf(pri2));
             imageView2.setVisible(true);
             imageView2.setImage(image2);
         }
@@ -113,6 +129,8 @@ public class buyerController {
             man3.setVisible(false);
             mod2.setVisible(false);
             mod3.setVisible(false);
+            price2.setVisible(false);
+            price3.setVisible(false);
             next.setVisible(false);
             imageView2.setVisible(false);
             imageView3.setVisible(false);
@@ -123,28 +141,34 @@ public class buyerController {
         if(image3!=null) {
             man3.setVisible(true);
             mod3.setVisible(true);
+            price3.setVisible(true);
             man3.setText(manu3);
             mod3.setText(model3);
+            price3.setText(String.valueOf(pri3));
             imageView3.setVisible(true);
             imageView3.setImage(image3);
         }
         else{
             man3.setVisible(false);
             mod3.setVisible(false);
+            price3.setVisible(false);
             next.setVisible(false);
             imageView3.setVisible(false);
             listing3.setVisible(false);
         }
     }
     public void onListing1Clicked() throws SQLException, IOException {
+        System.out.println("clicked");
         display.getCarDetails(car.getCarId(i));
         buy.launch();
     }
     public void onListing2Clicked() throws SQLException, IOException {
+        System.out.println("clicked");
         display.getCarDetails(car.getCarId(i+1));
         buy.launch();
     }
     public void onListing3Clicked() throws SQLException, IOException {
+        System.out.println("clicked");
         display.getCarDetails(car.getCarId(i+2));
         buy.launch();
     }
